@@ -770,6 +770,13 @@ nav ul {
         padding-top: 40px;
     }
 
+    .thanks{
+        background-image: url(../img/thanks.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 40px;
+    }
+
     .look__content {
         margin-top: 20px;
         padding-bottom: 30px;
@@ -783,6 +790,9 @@ nav ul {
         margin-bottom: 10px;
         font-size: 10px;
         font-weight: 400;
+    }
+    .thanks__content-text p{
+        font-size: 15px;
     }
 
     .look__content-subtitle {
@@ -807,6 +817,13 @@ nav ul {
 
     .look {
         background-image: url(../img/look.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 150px;
+    }
+    
+    .thanks{
+        background-image: url(../img/thanks.png);
         background-size: cover;
         background-repeat: no-repeat;
         padding-top: 150px;
