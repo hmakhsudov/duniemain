@@ -929,7 +929,20 @@ nav ul {
         margin: 0 auto; /* Центрируем видео по горизонтали */
         margin-top: 20px;
     }
+    .video__content{
+        text-align: left !important;
+        font-size: 20px;
+    }
+    .video__content p{
+        margin-bottom: 15px;
 
+    }
+    .video__content p span{
+        font-weight: 700;
+    }
+    .video__content h2 span{
+        font-weight: 700;
+    }
     .knowcansay h2 {
         font-weight: 400;
         font-size: 16px;
@@ -963,6 +976,20 @@ nav ul {
         display: block;
         margin: 0 auto; /* Центрируем видео по горизонтали */
         margin-top: 30px;
+    }
+    .video__content{
+        text-align: left !important;
+        font-size: 25px;
+    }
+    .video__content p{
+        margin-bottom: 15px;
+
+    }
+    .video__content p span{
+        font-weight: 700;
+    }
+    .video__content h2 span{
+        font-weight: 700;
     }
 
     .knowcansay__content {
@@ -1199,7 +1226,12 @@ form input::placeholder {
         position: relative;
         margin-bottom: 70px;
     }
-
+    .future__text{
+        max-height: 375px;
+    }
+    .future__text-title h2{
+        font-size: 14px;
+    }
     .future__content {
         width: 150px;
         color: #000;
@@ -1217,7 +1249,7 @@ form input::placeholder {
 
     .future__image img {
         width: 203px;
-        height: 375px;
+        height: 368px;
     }
 
     .footer__form {
