@@ -1111,7 +1111,6 @@ nav ul {
 .footer__form {
     display: flex;
     justify-content: space-between;
-    width: 1100px;
     height: 200px;
     background-color: #328692;
     border-radius: 10px;
