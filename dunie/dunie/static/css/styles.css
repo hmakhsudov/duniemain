@@ -149,7 +149,7 @@ body {
 }
 
 @media (max-width: 700px) {
-    body{
+    body {
         height: 7100px;
     }
 }
@@ -199,65 +199,75 @@ button {
 }
 
 
-.graphics__container{
+.graphics__container {
     width: 100%
 }
 
 @media (min-width: 700px) {
-    .intro{
+    .intro {
         background-color: rgba(248, 243, 243, 0.72);
         color: #000;
         padding-top: 30px;
         padding-bottom: 40px;
     }
-    .intro h2{
+
+    .intro h2 {
         font-size: 40px;
         padding-bottom: 80px;
     }
-    .intro__logos{
+
+    .intro__logos {
         display: flex;
         justify-content: space-around;
     }
-    .intro__logo-text{
+
+    .intro__logo-text {
         padding-bottom: 40px;
         font-size: 30px;
     }
-    .intro__logo-img{
+
+    .intro__logo-img {
         margin: 0 auto;
         width: 350px;
         height: 350px;
     }
-    .intro__logo-img img{
+
+    .intro__logo-img img {
         width: 350px;
         height: 350px;
     }
 }
 
 @media (max-width: 700px) {
-    .intro{
+    .intro {
         background-color: rgba(248, 243, 243, 0.72);
         color: #000;
         padding-top: 30px;
         padding-bottom: 40px;
     }
-    .intro h2{
+
+    .intro h2 {
         font-size: 25px;
         padding-bottom: 50px;
     }
-    .intro__logos{
+
+    .intro__logos {
         display: flex;
         justify-content: space-around;
     }
-    .intro__logo-text{
+
+    .intro__logo-text {
         padding-bottom: 15px;
         font-size: 16px;
     }
-    .intro__logo-img{
+
+    .intro__logo-img {
         margin: 0 auto;
         width: 100px;
         height: 100px;
     }
-    .intro__logo-img img{
+
+    .intro__logo-img img {
         width: 100px;
         height: 100px;
     }
@@ -304,9 +314,10 @@ button {
         background-position: -185px;
     }
 
-    .header__text{
+    .header__text {
         font-size: 13px;
     }
+
     header {
         background-color: #328692;
         padding-top: 20px;
@@ -591,13 +602,15 @@ nav ul {
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .cvb-business{
+
+    .cvb-business {
         background-image: url(../img/info-cvb-mobile.png);
         height: 525px;
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .info-main{
+
+    .info-main {
         background-image: url(../img/info-banner_mobile.png);
         height: 190px;
         background-size: cover;
@@ -653,7 +666,8 @@ nav ul {
         margin-top: 100px;
         width: 555px;
     }
-    .cvb-business-text{
+
+    .cvb-business-text {
         margin-top: 85px;
         width: 600px;
     }
@@ -662,7 +676,8 @@ nav ul {
         margin-bottom: 64px;
         width: 500px;
     }
-    .cvb-business-text h2{
+
+    .cvb-business-text h2 {
         margin-bottom: 40px;
         width: 700px;
     }
@@ -672,7 +687,8 @@ nav ul {
         font-weight: 400;
         font-size: 27px;
     }
-    .cvb-business-text p{
+
+    .cvb-business-text p {
         margin-bottom: 27px;
         font-weight: 400;
         font-size: 24px;
@@ -808,7 +824,8 @@ nav ul {
         width: 610px;
 
     }
-    .second__content-text-title{
+
+    .second__content-text-title {
         font-size: 30px;
         font-weight: 700;
         padding-bottom: 20px;
@@ -822,7 +839,8 @@ nav ul {
         font-size: 27px;
         font-weight: 400;
     }
-    .spendings_content-text{
+
+    .spendings_content-text {
         margin-top: 40px;
         margin-right: 0;
 
@@ -839,15 +857,16 @@ nav ul {
         padding-top: 40px;
         color: #000;
     }
-    
-    .cvb h2{
+
+    .cvb h2 {
         margin-bottom: 15px;
     }
 
-    .cvb h3{
+    .cvb h3 {
         font-weight: 700;
         font-size: 15px;
     }
+
     .look {
         background-image: url(../img/look.png);
         background-size: cover;
@@ -855,14 +874,14 @@ nav ul {
         padding-top: 40px;
     }
 
-    .thanks{
+    .thanks {
         background-image: url(../img/thanks.png);
         background-size: cover;
         background-repeat: no-repeat;
         padding-top: 40px;
     }
 
-    .future{
+    .future {
         background-image: url(../img/future_bg.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -883,7 +902,8 @@ nav ul {
         font-size: 13px;
         font-weight: 400;
     }
-    .thanks__content-text p{
+
+    .thanks__content-text p {
         font-size: 15px;
     }
 
@@ -915,8 +935,8 @@ nav ul {
         background-repeat: no-repeat;
         padding-top: 150px;
     }
-    
-    .thanks{
+
+    .thanks {
         background-image: url(../img/thanks.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -1027,34 +1047,43 @@ nav ul {
         padding-top: 29px;
         padding-bottom: 29px;
     }
-    .nopolitics{
+
+    .nopolitics {
         background-image: url(../img/nopolitics.png);
         background-size: cover;
         background-repeat: no-repeat;
         padding-top: 29px;
         padding-bottom: 29px;
     }
-    .nopolitics__content video{
-        width: 310px; /* Установите желаемую ширину */
+
+    .nopolitics__content video {
+        width: 310px;
+        /* Установите желаемую ширину */
         display: block;
-        margin: 0 auto; /* Центрируем видео по горизонтали */
+        margin: 0 auto;
+        /* Центрируем видео по горизонтали */
         margin-top: 20px;
     }
-    .video__content{
+
+    .video__content {
         text-align: left !important;
         font-size: 15px;
         color: #000;
     }
-    .video__content p{
+
+    .video__content p {
         margin-bottom: 15px;
 
     }
-    .video__content p span{
+
+    .video__content p span {
         font-weight: 700;
     }
-    .video__content h2 span{
+
+    .video__content h2 span {
         font-weight: 700;
     }
+
     .knowcansay h2 {
         font-weight: 400;
         font-size: 16px;
@@ -1075,7 +1104,8 @@ nav ul {
         padding-top: 110px;
         padding-bottom: 90px;
     }
-    .nopolitics{
+
+    .nopolitics {
         background-image: url(../img/nopolitics.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -1083,24 +1113,30 @@ nav ul {
         padding-bottom: 80px;
     }
 
-    .nopolitics__content video{
-        width: 800px; /* Установите желаемую ширину */
+    .nopolitics__content video {
+        width: 800px;
+        /* Установите желаемую ширину */
         display: block;
-        margin: 0 auto; /* Центрируем видео по горизонтали */
+        margin: 0 auto;
+        /* Центрируем видео по горизонтали */
         margin-top: 30px;
     }
-    .video__content{
+
+    .video__content {
         text-align: left !important;
         font-size: 25px;
     }
-    .video__content p{
+
+    .video__content p {
         margin-bottom: 15px;
 
     }
-    .video__content p span{
+
+    .video__content p span {
         font-weight: 700;
     }
-    .video__content h2 span{
+
+    .video__content h2 span {
         font-weight: 700;
     }
 
@@ -1110,8 +1146,8 @@ nav ul {
         margin: 0 auto;
     }
 
-    .nopolitics__content h2{
-       
+    .nopolitics__content h2 {
+
         font-size: 30px;
         font-weight: 500;
     }
@@ -1213,37 +1249,37 @@ nav ul {
         padding-right: 20px;
         padding-bottom: 25px;
         width: 290px;
-        
+
     }
-    
+
     .form__text {
         font-size: 20px;
         text-align: center;
         padding-top: 20px;
         padding-bottom: 30px;
-    
+
     }
-    
+
     .form__text span {
         font-weight: 700;
     }
-    
+
     .form__form {
         background-color: #fff;
         border-radius: 4px;
-    
-    
-    
+
+
+
     }
-    
+
     .form__form form {
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 50px;
-    
+
     }
-    
+
     form button {
         background-color: #0081FE;
         padding: 9px 5px;
@@ -1252,9 +1288,9 @@ nav ul {
         margin-right: 8px;
         width: 80px;
         border-radius: 5px;
-    
+
     }
-    
+
     form input {
         color: #000;
         width: 155px;
@@ -1263,9 +1299,9 @@ nav ul {
         padding-left: 11px;
         outline: none;
         font-size: 14px;
-    
+
     }
-    
+
     form input::placeholder {
         color: #2B3D51;
         font-size: 16px;
@@ -1284,33 +1320,33 @@ nav ul {
         align-items: center;
         margin-bottom: 55px;
     }
-    
+
     .form__text {
         font-size: 32px;
-    
+
     }
-    
+
     .form__text span {
         font-weight: 700;
     }
-    
+
     .form__form {
         width: 300px;
         background-color: #fff;
         border-radius: 4px;
-    
-    
-    
+
+
+
     }
-    
+
     .form__form form {
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 73px;
-    
+
     }
-    
+
     form button {
         background-color: #0081FE;
         padding: 14px 29px;
@@ -1319,9 +1355,9 @@ nav ul {
         margin-right: 8px;
         width: 60px;
         border-radius: 5px;
-    
+
     }
-    
+
     form input {
         color: #000;
         width: 100px;
@@ -1330,9 +1366,9 @@ nav ul {
         padding-left: 10px;
         outline: none;
         font-size: 18px;
-    
+
     }
-    
+
     form input::placeholder {
         color: #2B3D51;
         font-size: 16px;
@@ -1340,13 +1376,14 @@ nav ul {
 }
 
 @media (max-width: 700px) {
-    .graphics img{
+    .graphics img {
         width: 100%;
         height: 250px;
     }
 }
-@media (min-width: 700px){
-    .graphics{
+
+@media (min-width: 700px) {
+    .graphics {
         display: none;
     }
 }
@@ -1419,11 +1456,11 @@ nav ul {
 
 @media (max-width: 700px) {
     .future {
-    
+
         margin-bottom: 70px;
     }
 
-    .future__text-title h2{
+    .future__text-title h2 {
         font-size: 20px;
     }
 
@@ -1438,18 +1475,26 @@ nav ul {
         width: 203px;
         height: 368px;
     }
-    .footer__policy{
+
+    .footer__policy {
         margin-bottom: 15px;
         font-size: 10px;
     }
-    .footer__policy a{
+
+    .footer__policy a {
         font-size: 20px;
     }
+
     .footer__contacts {
         display: flex;
         justify-content: space-between;
         color: #000;
         margin-bottom: 20px;
+    }
+
+    .footer__left {
+        text-align: center;
+        width: 100%;
     }
 
     .footer__right ul {
@@ -1473,16 +1518,17 @@ nav ul {
         color: #0A142F;
     }
 
-    .footer__copyright{
+    .footer__copyright {
         font-size: 15px;
         margin-bottom: 20px;
     }
-    .footer__copyright a{
+
+    .footer__copyright a {
         font-size: 15px;
     }
 
 
- 
+
 
     .footer__policy ul li a {
         font-size: 8px;
@@ -1492,19 +1538,23 @@ nav ul {
 
 
 @media (max-width: 700px) {
-    .footer__telegram{
+    .footer__telegram {
         margin-bottom: 40px;
         color: #000;
+        text-align: center;
     }
-    .footer__telegram-links{
+
+    .footer__telegram-links {
         display: flex;
         margin-top: 20px;
         justify-content: space-between;
     }
-    .footer__telegram-link img{
+
+    .footer__telegram-link img {
         width: 90px;
         height: 90px;
     }
+
     .footer__telegram-link {
         width: 90px;
         height: 90px;
