@@ -605,7 +605,7 @@ nav ul {
 
     .cvb-business {
         background-image: url(../img/info-cvb-mobile.png);
-        height: 525px;
+        height: 820px;
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -1047,6 +1047,9 @@ nav ul {
         padding-top: 29px;
         padding-bottom: 29px;
     }
+    .phrase {
+        background-image: url(../img/phrase.png);
+    }
 
     .nopolitics {
         background-image: url(../img/nopolitics.png);
@@ -1087,6 +1090,9 @@ nav ul {
     .knowcansay h2 {
         font-weight: 400;
         font-size: 16px;
+    }
+    .knowcansay h2 span{
+        font-weight: 700;
     }
 
     .knowcansay__content {
