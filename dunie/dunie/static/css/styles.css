@@ -632,7 +632,7 @@ nav ul {
 
     .info__content-text p {
         margin-top: 24px;
-        width: 266px;
+        width: 300px;
         font-weight: 300;
         font-size: 13px;
     }
@@ -648,7 +648,7 @@ nav ul {
 
     .cvb-business {
         background-image: url(../img/cvb_business.png);
-        height: 830px;
+        height: 770px;
         background-size: cover;
         background-repeat: no-repeat;
     }
