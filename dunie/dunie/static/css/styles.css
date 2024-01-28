@@ -315,7 +315,7 @@ button {
     }
 
     .header__text {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     header {
@@ -609,10 +609,17 @@ nav ul {
         background-size: cover;
         background-repeat: no-repeat;
     }
+    
 
     .info-main {
         background-image: url(../img/info-banner_mobile.png);
         height: 190px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .global{
+        background-image: url(../img/global_bg.png);
+        height: 450px;
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -636,6 +643,9 @@ nav ul {
         font-weight: 300;
         font-size: 13px;
     }
+    .global-title{
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 700px) {
@@ -652,6 +662,7 @@ nav ul {
         background-size: cover;
         background-repeat: no-repeat;
     }
+
 
     .cvb-business__content {
         display: block;
@@ -789,7 +800,7 @@ nav ul {
 
     .second_info {
         background-image: url(../img/info-banner2_mobile.png);
-        height: 405px;
+        height: 470px;
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -807,7 +818,11 @@ nav ul {
     }
 
     .second_content-text p {
-        font-size: 13px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .global_content-text p {
+        font-size: 15px;
         font-weight: 300;
     }
 }
