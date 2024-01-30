@@ -605,7 +605,7 @@ nav ul {
 
     .cvb-business {
         background-image: url(../img/info-cvb-mobile.png);
-        height: 820px;
+        height: 870px;
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -642,6 +642,10 @@ nav ul {
         width: 300px;
         font-weight: 300;
         font-size: 13px;
+    }
+
+    .cvb-business-text p{
+        font-size: 15px;
     }
     .global-title{
         font-size: 20px;
@@ -756,7 +760,7 @@ nav ul {
         background-size: cover;
         background-repeat: no-repeat;
         padding-top: 39px;
-        height: 650px;
+        height: 870px;
     }
 
     .item3 {
@@ -784,10 +788,14 @@ nav ul {
     .problems__item-title {
         margin-bottom: 12px;
         font-weight: 700;
+        font-size: 18px;
+    }
+    .problems__item-title h3{
+        font-size: 18px;
     }
 
     .problems__item-description {
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 300;
     }
 }
@@ -1230,7 +1238,7 @@ nav ul {
         background-image: url(../img/whoami_mobile.png);
         background-size: cover;
         background-repeat: no-repeat;
-        height: 315px;
+        height: 675px;
     }
 }
 
