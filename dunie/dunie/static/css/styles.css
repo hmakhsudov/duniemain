@@ -889,7 +889,13 @@ nav ul {
         font-weight: 700;
         font-size: 15px;
     }
-
+    .advantages_cvb {
+        background-image: url(../img/advantages_cvb.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 40px;
+        color: #000;
+    }
     .look {
         background-image: url(../img/look.png);
         background-size: cover;
