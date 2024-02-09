@@ -998,7 +998,7 @@ nav ul {
 
 @media (max-width: 700px) {
     .need {
-        height: 610px;
+        height: 650px;
         margin-bottom: 35px;
         background-image: url(../img/need_mobile.png);
         background-size: cover;
