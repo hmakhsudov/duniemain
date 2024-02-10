@@ -10,20 +10,25 @@ services:
       context: .
     ports:
       - "8000:8000"
+    depends_on:
+      - redis
 
   nginx:
     build: ./nginx
     volumes:
       - static:/static
-      # - ./www_school_broker_ru_2024_02_22.crt:/www_school_broker_ru_2024_02_22.crt  
       - ./ssl_key.key:/ssl_key.key
-      # - ./intermediate_pem_globalsign_ssl_dv_free_1.crt:/intermediate_pem_globalsign_ssl_dv_free_1.crt
       - ./combined.crt:/combined.crt
     ports:
       - "80:80"
       - "443:443"
     depends_on:
       - django_gunicorn
+
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
 
 volumes:
   static:
