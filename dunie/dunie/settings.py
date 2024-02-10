@@ -49,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'content.middleware.OnlineUsersMiddleware',
+
 ]
 
 ROOT_URLCONF = 'dunie.urls'
@@ -84,10 +86,19 @@ DATABASES = {
     }
 }
 
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': 'redis://redis:6379/1',  # Обратите внимание, что 'redis' - это имя сервиса в вашем docker-compose.yml
+#         'OPTIONS': {
+#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#         }
+#     }
+# }
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://redis:6379/1',  # Обратите внимание, что 'redis' - это имя сервиса в вашем docker-compose.yml
+        'LOCATION': 'redis://127.0.0.1:6379/1',  # Адрес Redis-сервера
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
