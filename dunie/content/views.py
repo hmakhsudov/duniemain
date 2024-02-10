@@ -30,7 +30,7 @@ def increment_counter(request):
 
 def view_counter(request):
     unique_visitors_count = cache.get('unique_visitors_count', 0)
-    return render(request, 'counter/view_counter.html', {'unique_visitors_count': unique_visitors_count})
+    return render(request, 'view_counter.html', {'unique_visitors_count': unique_visitors_count})
 
 
 def index(request):
