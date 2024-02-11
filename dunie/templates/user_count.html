@@ -1,9 +1,10 @@
+<!-- user_count.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Счетчик пользователей</title>
+    <title>Online Users</title>
     <!-- Подключение Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -14,8 +15,15 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-4 mb-4">Счетчик пользователей</h1>
-        <p class="lead">Количество пользователей, воспользовавшиеся сайтом: <span class="badge badge-primary">{{ online_users }}</span></p>
+        <h1 class="mt-4 mb-4">Online Users</h1>
+        <p class="lead">Number of online users: <span class="badge badge-primary">{{ online_users }}</span></p>
+
+        <h2 class="mt-4 mb-4">User IPs:</h2>
+        <ul>
+            {% for user_ip in user_ips %}
+                <li>{{ user_ip }}</li>
+            {% endfor %}
+        </ul>
     </div>
 
     <!-- Подключение Bootstrap JS (необходимо для работы стилей badge) -->
