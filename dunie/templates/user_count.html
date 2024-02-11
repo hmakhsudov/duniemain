@@ -4,26 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Users</title>
+    <title>Счетчик пользователей</title>
     <!-- Подключение Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             padding: 20px;
         }
+        .user-stats {
+            margin-top: 20px;
+        }
+        .user-entry {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-4 mb-4">Online Users</h1>
+        <h1 class="mt-4 mb-4">Online Users Statistics</h1>
         <p class="lead">Number of online users: <span class="badge badge-primary">{{ online_users }}</span></p>
 
-        <h2 class="mt-4 mb-4">User IPs:</h2>
-        <ul>
-            {% for user_ip in user_ips %}
-                <li>{{ user_ip }}</li>
+        <div class="user-stats">
+            {% for user_entry in user_entries %}
+                <div class="user-entry">
+                    <h3>{{ user_entry.date }}</h3>
+                    {% for entry in user_entry.hourly_entries %}
+                        <p>
+                            <strong>{{ entry.hour }}</strong><br>
+                            IP пользователя: {{ entry.ip }}<br>
+                            Время захода: {{ entry.timestamp }}<br>
+                            Страна: {{ entry.country }}, Город: {{ entry.city }}
+                        </p>
+                    {% endfor %}
+                </div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 
     <!-- Подключение Bootstrap JS (необходимо для работы стилей badge) -->

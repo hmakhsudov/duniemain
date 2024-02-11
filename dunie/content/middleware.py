@@ -2,6 +2,7 @@
 import redis
 from django.conf import settings
 from datetime import datetime
+import requests
 
 class OnlineUsersMiddleware:
     def __init__(self, get_response):
@@ -18,9 +19,12 @@ class OnlineUsersMiddleware:
             self.redis_client.incr('online_users')
             # Устанавливаем метку, что пользователь уже учтен
             self.redis_client.set(key, '1')
-            # Сохраняем IP-адрес и дату в отдельный список
+            # Получаем информацию о геолокации
+            country, city = self._get_geo_info(user_ip)
+            # Сохраняем IP-адрес, дату, страну и город в отдельный список
             timestamp = datetime.now().strftime("%d.%m.%Y %H:%M:%S")
-            self.redis_client.lpush('user_ips', f'{timestamp} - {user_ip}')
+            geo_info = f'{timestamp} - {user_ip} - {country} - {city}'
+            self.redis_client.lpush('user_ips', geo_info)
         
         response = self.get_response(request)
         return response
@@ -32,3 +36,16 @@ class OnlineUsersMiddleware:
         else:
             ip = request.META.get('REMOTE_ADDR')
         return ip
+
+    def _get_geo_info(self, ip_address):
+        url = f'http://ip-api.com/json/{ip_address}'
+        response = requests.get(url)
+        data = response.json()
+
+        if data['status'] == 'fail':
+            print('Ошибка при получении информации о геолокации.')
+            return None, None
+        else:
+            country = data.get('country')
+            city = data.get('city')
+            return country, city
