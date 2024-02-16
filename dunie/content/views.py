@@ -38,6 +38,9 @@ def format_user_entries(user_visits):
             'city': visit.city,
         })
 
+    # Sort user entries by timestamp in reverse order (newest first)
+    user_entries.sort(key=lambda x: max(entry['timestamp'] for entry in x['user_details']), reverse=True)
+
     return user_entries
 def index(request):
     return render(request, 'index.html')
