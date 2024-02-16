@@ -298,6 +298,9 @@ button {
         width: 250px;
         height: 250px;
     }
+    .header__text {
+        font-size: 26px;
+    }
 
 
 }
@@ -592,6 +595,9 @@ nav ul {
 
 
 @media (max-width: 700px) {
+    .iframe{
+        max-width: 300px;
+    }
     .info__image {
         display: none;
     }
@@ -653,6 +659,13 @@ nav ul {
 }
 
 @media (min-width: 700px) {
+    .iframe{
+        width: 900px;
+        height: 500px;
+    }
+    .whoami{
+        height: 862px;
+    }
     .info {
         background-color: #328692;
         position: relative;
@@ -662,7 +675,7 @@ nav ul {
 
     .cvb-business {
         background-image: url(../img/cvb_business.png);
-        height: 770px;
+        height: 1070px;
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -679,12 +692,12 @@ nav ul {
 
     .info__content-text {
         margin-top: 100px;
-        width: 555px;
+        width: 550px;
     }
 
     .cvb-business-text {
         margin-top: 85px;
-        width: 600px;
+        width: 800px;
     }
 
     .info__content-text h2 {
@@ -702,6 +715,9 @@ nav ul {
         font-weight: 400;
         font-size: 27px;
     }
+    .need__content-text p{
+        font-size: 24px;
+    }
 
     .cvb-business-text p {
         margin-bottom: 27px;
@@ -717,6 +733,9 @@ nav ul {
 }
 
 @media (min-width: 700px) {
+    .second_info{
+        height: 820px;
+    }
     .problems {
         background-image: url(../img/problems.png);
         background-size: cover;
@@ -724,6 +743,7 @@ nav ul {
         padding-top: 130px;
 
     }
+    
 
     .problems h2 {
 
@@ -751,6 +771,9 @@ nav ul {
     .problems__item-description {
         font-size: 24px;
         font-weight: 400;
+    }
+    .cvb {
+        color: #000;
     }
 }
 
@@ -862,6 +885,9 @@ nav ul {
         font-size: 27px;
         font-weight: 400;
     }
+    .whoami_content-text p{
+        font-size: 21px;
+    }
 
     .spendings_content-text {
         margin-top: 40px;
@@ -953,10 +979,10 @@ nav ul {
         background-image: url(../img/cvb_bg.png);
         background-size: cover;
         background-repeat: no-repeat;
-        padding-top: 150px;
+        padding-top: 100px;
     }
 
-
+    
 
     .look {
         background-image: url(../img/look.png);
@@ -1037,7 +1063,7 @@ nav ul {
 
 @media (min-width: 700px) {
     .need {
-        height: 1150px;
+        height: 1140px;
         margin-bottom: 150px;
     }
 
@@ -1366,7 +1392,7 @@ nav ul {
     }
 
     .form__form {
-        width: 300px;
+        width: 400px;
         background-color: #fff;
         border-radius: 4px;
 
@@ -1388,14 +1414,14 @@ nav ul {
         color: #fff;
         font-size: 16px;
         margin-right: 8px;
-        width: 60px;
+        width: 145px;
         border-radius: 5px;
 
     }
 
     form input {
         color: #000;
-        width: 100px;
+        width: 205px;
         border: none;
         border-radius: 4px;
         padding-left: 10px;
@@ -1469,14 +1495,14 @@ nav ul {
     .future {
         position: relative;
         margin-bottom: 150px;
+        padding-top: 60px;
     }
 
     .future__content {
-        width: 500px;
-        color: #000;
-        padding-top: 150px;
         font-size: 26px;
         font-weight: 400;
+        padding-bottom: 60px;
+
     }
 
     .future__image {
@@ -1594,5 +1620,33 @@ nav ul {
         width: 90px;
         height: 90px;
         margin: 0 auto;
+    }
+}
+
+@media (min-width: 700px) {
+    .footer__telegram{
+        color: #000;
+    }
+    .footer__telegram h2{
+        margin-bottom: 60px;
+    }
+    .footer__telegram-links{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    .footer__telegram-link{
+        width: 350px;
+        height: 350px;
+        margin: 0 auto;
+    }
+    .footer__telegram-link img{
+        width: 350px;
+        height: 350px;
+        margin: 0 auto;
+    }
+    .footer__contacts{
+        font-size: 30px;
     }
 }
