@@ -1,50 +1,43 @@
 # views.py
 from django.shortcuts import render
-import redis
-from django.conf import settings
-from datetime import datetime
+from .models import UserVisit
 
 def user_count(request):
-    redis_client = redis.StrictRedis.from_url(settings.CACHES['default']['LOCATION'])
-    online_users = redis_client.get('online_users')
+    # Получаем общее количество записей в базе данных
+    total_users = UserVisit.objects.count()
 
-    user_ips = redis_client.lrange('user_ips', 0, -1)
-    user_entries = format_user_entries(user_ips)
+    # Получаем информацию о посещениях пользователей из базы данных
+    user_visits = UserVisit.objects.all()
 
-    return render(request, 'user_count.html', {'online_users': online_users.decode('utf-8') if online_users else '0', 'user_entries': user_entries})
+    # Форматируем данные для передачи в шаблон
+    user_entries = format_user_entries(user_visits)
+    print(user_entries)
+    return render(request, 'user_count.html', {'total_users': total_users, 'user_entries': user_entries})
 
-def format_user_entries(user_ips):
+def format_user_entries(user_visits):
     user_entries = []
-    current_date = None
-    hourly_entries = []
 
-    for entry in user_ips:
-        entry_parts = entry.decode('utf-8').split(' - ')
-        timestamp_str = entry_parts[0]
-        user_ip_str = entry_parts[1]
-        try:
-            country = entry_parts[2]
-            city = entry_parts[3]
-        except IndexError:
-            country = city = "N/A"  # Или любое другое значение по умолчанию, которое вы хотите использовать.
-
-        timestamp = datetime.strptime(timestamp_str, "%d.%m.%Y %H:%M:%S")
+    for visit in user_visits:
+        timestamp = visit.timestamp
         date_str = timestamp.strftime("%d.%m.%Y")
         hour_str = timestamp.strftime("%H:00-%H:59")
 
-        if date_str != current_date:
-            if current_date is not None:
-                user_entries.append({'date': current_date, 'hourly_entries': hourly_entries})
+        # Find or create the user entry for the current date and hourly period
+        user_entry = next((entry for entry in user_entries if entry['date'] == date_str and entry['hour'] == hour_str), None)
 
-            hourly_entries = [{'hour': hour_str, 'ip': user_ip_str, 'timestamp': timestamp_str, 'country': country, 'city': city}]
-            current_date = date_str
-        else:
-            hourly_entries.append({'hour': hour_str, 'ip': user_ip_str, 'timestamp': timestamp_str, 'country': country, 'city': city})
+        if user_entry is None:
+            # If the user entry doesn't exist, create a new one
+            user_entry = {'date': date_str, 'hour': hour_str, 'user_details': []}
+            user_entries.append(user_entry)
 
-    if current_date is not None:
-        user_entries.append({'date': current_date, 'hourly_entries': hourly_entries})
+        # Add user details to the current user entry
+        user_entry['user_details'].append({
+            'ip': visit.ip_address,
+            'timestamp': timestamp.strftime("%H:%M:%S"),
+            'country': visit.country,
+            'city': visit.city,
+        })
 
     return user_entries
-
 def index(request):
     return render(request, 'index.html')

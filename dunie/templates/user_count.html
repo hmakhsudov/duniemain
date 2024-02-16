@@ -24,18 +24,18 @@
 <body>
     <div class="container">
         <h1 class="mt-4 mb-4">Счетчик пользователей</h1>
-        <p class="lead">Общее количество посетителей сайта: <span class="badge badge-primary">{{ online_users }}</span></p>
+        <p class="lead">Общее количество посетителей сайта: <span class="badge badge-primary">{{ total_users }}</span></p>
 
         <div class="user-stats">
             {% for user_entry in user_entries %}
                 <div class="user-entry">
-                    <h3>{{ user_entry.date }}</h3>
-                    {% for entry in user_entry.hourly_entries %}
+                    <h3>День: {{ user_entry.date }}</h3>
+                    <p>Период: {{ user_entry.hour }}</p>
+                    {% for entry in user_entry.user_details %}
                         <p>
-                            <strong>{{ entry.hour }}</strong><br>
-                            IP пользователя: {{ entry.ip }}<br>
-                            Время захода: {{ entry.timestamp }}<br>
-                            Страна: {{ entry.country }}, Город: {{ entry.city }}
+                            <strong>IP пользователя:</strong> {{ entry.ip }}<br>
+                            <strong>Время захода:</strong> {{ entry.timestamp }}<br>
+                            <strong>Страна:</strong> {{ entry.country }}, <strong>Город:</strong> {{ entry.city }}
                         </p>
                     {% endfor %}
                 </div>
