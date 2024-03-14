@@ -137,7 +137,7 @@ html {
 }
 
 body {
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'EB Garamond', sans-serif;
     color: #fff;
     font-weight: 500;
     box-sizing: border-box;
@@ -146,12 +146,11 @@ body {
     margin: 0;
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 @media (max-width: 700px) {
-    body {
-        height: 7100px;
-    }
+
 }
 
 
@@ -162,7 +161,7 @@ a {
 }
 
 button {
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'EB Garamond', sans-serif;
     background-color: transparent;
     border: none;
     color: #fff;
@@ -228,13 +227,13 @@ button {
 
     .intro__logo-img {
         margin: 0 auto;
-        width: 350px;
-        height: 350px;
+        width: 260px;
+        height: 260px;
     }
 
     .intro__logo-img img {
-        width: 350px;
-        height: 350px;
+        width: 260px;
+        height: 260px;
     }
 }
 
@@ -664,12 +663,19 @@ nav ul {
         height: 500px;
     }
     .whoami{
-        height: 862px;
+        height: 920px !important;
     }
     .info {
         background-color: #328692;
         position: relative;
         height: 680px;
+        overflow: hidden;
+    }
+
+    .global{
+        background-color: #328692;
+        position: relative;
+        height: 750px;
         overflow: hidden;
     }
 
@@ -715,8 +721,11 @@ nav ul {
         font-weight: 400;
         font-size: 27px;
     }
+    .need__content-text{
+        width: 530px;
+    }
     .need__content-text p{
-        font-size: 24px;
+        font-size: 23px;
     }
 
     .cvb-business-text p {
@@ -730,6 +739,14 @@ nav ul {
         right: 0;
         top: 0;
     }
+
+    .whoami_image img{
+        height: 807px; /* чтобы текст не вылезал*/
+    }
+    .whoami_content-text{
+        margin-top: 50px;
+    }
+    
 }
 
 @media (min-width: 700px) {
@@ -1008,6 +1025,9 @@ nav ul {
         font-size: 28px;
         font-weight: 400;
     }
+    .look__content-text li{
+        font-size: 28px;
+    }
 
     .look__content-subtitle {
         margin-top: 90px;
@@ -1270,7 +1290,7 @@ nav ul {
         background-image: url(../img/whoami_mobile.png);
         background-size: cover;
         background-repeat: no-repeat;
-        height: 675px;
+        height: 710px;
     }
 }
 
